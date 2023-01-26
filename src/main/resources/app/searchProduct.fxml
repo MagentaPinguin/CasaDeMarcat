@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="387.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.SearchProduct">
+   <children>
+      <TableView fx:id="tabProducts" layoutX="14.0" layoutY="14.0" prefHeight="355.0" prefWidth="318.0">
+        <columns>
+          <TableColumn fx:id="columnCod" prefWidth="60.00000286102295" text="Cod" />
+          <TableColumn fx:id="columnCategory" prefWidth="76.66661834716797" text="Categorie" />
+            <TableColumn fx:id="columnName" prefWidth="99.33331298828125" text="Nume" />
+            <TableColumn fx:id="columnPrice" prefWidth="80.00007629394531" text="Pret" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchName" layoutX="351.0" layoutY="30.0" prefHeight="25.0" prefWidth="110.0" promptText="Nume" />
+      <TextField fx:id="searchCategory" layoutX="351.0" layoutY="69.0" prefHeight="25.0" prefWidth="110.0" promptText="Categorie" />
+      <TextField fx:id="searchPrice" layoutX="351.0" layoutY="107.0" prefHeight="25.0" prefWidth="110.0" promptText="Pret" />
+      <Button fx:id="buttonExit" layoutX="363.0" layoutY="153.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="85.0" text="Close" />
+   </children>
+</AnchorPane>
