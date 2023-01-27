@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import service.Service;
 
-public class AddElement extends abstractController{
+public class AddElement extends AbstractController {
 
     public TextField codElem;
     public TextField categoryElem;

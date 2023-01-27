@@ -17,7 +17,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InterfaceController extends abstractController {
+public class InterfaceController extends AbstractController {
 
     private final List<Pair<Product,Integer>> productList=new ArrayList<>();
     public TextField cod_input;

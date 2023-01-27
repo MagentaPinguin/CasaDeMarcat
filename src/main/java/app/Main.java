@@ -16,7 +16,7 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         InterfaceController loader=fxmlLoader.getController();
         loader.setService(service);
-        stage.setTitle("CASA_DE_MARCAT");
+        stage.setTitle("CASA_DE_MARCAT" );
         stage.setScene(scene);
         stage.show();
     }

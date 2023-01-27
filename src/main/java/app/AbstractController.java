@@ -10,7 +10,7 @@ import service.Service;
 
 import java.io.IOException;
 
-public class abstractController {
+public class AbstractController {
     protected Service service;
 
     void setService(Service s) {
@@ -37,7 +37,7 @@ public class abstractController {
     public void openStage(String stageFML,String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(stageFML));
         Scene scene = new Scene(fxmlLoader.load());
-        abstractController loader=fxmlLoader.getController();
+        AbstractController loader=fxmlLoader.getController();
         loader.setService(this.service);
         Stage stage=new Stage();
         stage.setTitle(title);

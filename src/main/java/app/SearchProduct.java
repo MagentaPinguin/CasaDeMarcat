@@ -14,7 +14,7 @@ import validators.ServiceException;
 
 import java.util.function.Predicate;
 
-public class SearchProduct extends abstractController{
+public class SearchProduct extends AbstractController {
 
 
 
