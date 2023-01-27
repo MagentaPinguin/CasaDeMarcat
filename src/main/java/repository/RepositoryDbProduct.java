@@ -39,8 +39,8 @@ public class RepositoryDbProduct implements RepositoryDB<Product> {
             ResultSet resultSet= preparedStatement.executeQuery();
             while(resultSet.next()) {
                 productList.add(new Product(resultSet.getString("cod_product"),
-                        resultSet.getString("name"),
                         resultSet.getString("category"),
+                        resultSet.getString("name"),
                         resultSet.getDouble("price")));
             }
             return productList;

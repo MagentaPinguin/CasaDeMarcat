@@ -22,19 +22,25 @@ public class abstractController {
         err.setContentText(context);
         err.show();
     }
+    public void confirmation(String title, String context) {
+        Alert err=new Alert(Alert.AlertType.CONFIRMATION);
+        err.setTitle(title);
+        err.setContentText(context);
+        err.show();
+    }
 
     public void close(ActionEvent actionEvent) {
         Node source = (Node) actionEvent.getSource();
         Stage theStage = (Stage) source.getScene().getWindow();
         theStage.close();
     }
-    public void openStage(String stageFML) throws IOException {
+    public void openStage(String stageFML,String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(stageFML));
         Scene scene = new Scene(fxmlLoader.load());
         abstractController loader=fxmlLoader.getController();
         loader.setService(this.service);
         Stage stage=new Stage();
-        stage.setTitle("Search");
+        stage.setTitle(title);
         stage.setScene(scene);
         stage.show();
     }

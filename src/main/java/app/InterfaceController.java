@@ -81,13 +81,13 @@ public class InterfaceController extends abstractController {
         File myObj = new File("bonuri/bon-"+LocalDateTime.now().format(DateTimeFormatter.ofPattern("___dd-MM-yyyy__HH-mm-ss"))+".txt");
         if(!myObj.exists()) {
             try {
-                System.out.println(myObj.createNewFile());
+               var dump=myObj.createNewFile();
             } catch (IOException e) {
                 alertWarning("WARRNING",e.getMessage());
             }
         }
         try {
-            System.out.println(myObj.getAbsolutePath());
+
             FileWriter wr=new FileWriter(myObj);
             wr.write("Bonul generat la data "+LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)+"\n");
             wr.write("--------------------------------------------------------------------------------\n");
@@ -103,7 +103,7 @@ public class InterfaceController extends abstractController {
 
     public void openSearch() {
         try {
-            openStage("searchProduct.fxml");
+            openStage("searchProduct.fxml","Search");
         } catch (IOException e) {
             alertWarning("ERROR","Opening stage");
         }
@@ -111,7 +111,7 @@ public class InterfaceController extends abstractController {
 
     public void addNewProduct() {
         try {
-            openStage("addElement.fxml");
+            openStage("addElement.fxml","Add");
         } catch (IOException e) {
             alertWarning("ERROR","Opening stage");
         }
